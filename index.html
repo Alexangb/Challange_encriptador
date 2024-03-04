@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <title>Cifrado</title>
+  </head>
+  <body>
+    <nav class="logo">
+      <img class="logo" src="img/Logo.png" alt="logo" />
+    </nav>
+
+    <div class="texto_cifrado">
+      <textarea type="text" id="texto_cifrado"></textarea>
+    </div>
+
+    <section class="resultado_section">
+      <img class="muñeco" src="img/Muñeco.png" />
+      <p class="ningúnmensajefueencontrado" id="texto_desencriptado">
+        ningún mensaje fue encontrado
+      </p>
+      <button type="button" id="btn_copiar" onclick="copiarAlPortapapeles('texto_desencriptado')">
+        Copiar
+      </button>
+      <!-- <p class="ingresaeltextoquedeseesencriptarodesencriptar"> ingresa el texto quedese esencriptar o desencriptar</span> -->
+      <!-- <textarea name="resultado" class="ingresaeltextoquedeseesencriptarodesencriptar" id="texto_desencriptado" cols="30" rows="10"> ningún mensaje fue encontrado</textarea> -->
+    </section>
+
+    <span class="advertencia"
+      ><img src="img/advertencia1.png" class="icono" />==letras minusculas y sin
+      acentos</span
+    >
+    <!-- Botones de cifrar y descifrar -->
+
+    <div class="section_buttons">
+      <button type="button" id="btn_encriptado">Encriptar</button>
+      <button type="button" id="btn_desencriptar">Desencriptar</button>
+    </div>
+
+    <script>
+      var btn = document.querySelector("#btn_encriptado");
+      btn.onclick = Encriptar;
+
+      var btn = document.querySelector("#btn_desencriptar");
+      btn.onclick = Desencriptar;
+    </script>
+  </body>
+</html>
